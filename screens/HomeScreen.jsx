@@ -14,15 +14,13 @@ const HomeScreen = ({navigation}) => {
         title=" Go to Boking" 
         onPress={() => navigation.push('Boking')}
       />
-
+      <Image source={logo} style={styles.logo} />
       <Image source={placeHolderImage} style={styles.image}/>
       <Image source={frontImage} style={styles.FrontImage}/>
       <Text style={styles.header}>Behöve du skjuts? Boka taxi nu! Beställ Taxi i Övik</Text>
 
     </View>
-  )
-
-  
+  )  
 }
 
 export default HomeScreen
@@ -40,7 +38,7 @@ const styles = StyleSheet.create({
   },
   FrontImage: {
     position: "absolute",
-    bottom: "60%"
+    bottom: "50%"
   },
   header:{
     width: "40%",
@@ -54,5 +52,10 @@ const styles = StyleSheet.create({
     position: "relative",
     top: "70%",
     color: "white"
+  },
+  
+  logo: {
+    position: "absolute",
+    top: "5%"
   }
 })
