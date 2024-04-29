@@ -7,6 +7,7 @@ const Boking = ({navigation}) => {
     <View > 
       <Text>Boking</Text>
       <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <Button title="Go to Confirmation" onPress={() => navigation.navigate('Confirmation')} />
     </View>
   )
 

@@ -19,7 +19,7 @@ const HomeScreen = ({navigation}) => {
       <Image source={placeHolderImage} style={styles.image}/>
       <Image source={frontImage} style={styles.FrontImage}/>
       <Image source={wall} style={styles.wall} />
-      <Text style={styles.header}>Behöve du skjuts? Boka taxi nu!</Text>
+      <Text style={styles.header}>Behöver du skjuts? Boka taxi nu!</Text>
       <StatusBar style='auto'/>
       <View style={styles.titleContainer}>
       <Button tyle={styles.title}   title="Beställ" onPress={() => navigation.navigate('Boking')} s
@@ -70,6 +70,9 @@ const styles = StyleSheet.create({
     top: "80%",
     color:"white",
     backgroundColor: "#E59C0A",
-    margin: 20
+    margin: 20,
+    borderRadius: "10%",
+    paddingLeft: 10,
+    paddingRight: 10,
   }, 
 })

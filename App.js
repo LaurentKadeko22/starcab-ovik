@@ -6,6 +6,7 @@ import HomeScreen from './screens/HomeScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Boking from './screens/Boking'
+import Confirmation from './screens/Confirmation';
 
 
 const Stack = createNativeStackNavigator()
@@ -18,6 +19,10 @@ export default function App() {
       <Stack.Screen 
       name='Boking'
       component={Boking}
+      />
+      <Stack.Screen
+      name='Confirmation'
+      component={Confirmation}
       />
     </Stack.Navigator>
   </NavigationContainer>
