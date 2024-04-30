@@ -7,6 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Boking from './screens/Boking'
 import Confirmation from './screens/Confirmation';
+import LoginForm from './screens/LoginForm';
 
 
 const Stack = createNativeStackNavigator()
@@ -23,6 +24,10 @@ export default function App() {
       <Stack.Screen
       name='Confirmation'
       component={Confirmation}
+      />
+      <Stack.Screen 
+      name='Login'
+      component={LoginForm}
       />
     </Stack.Navigator>
   </NavigationContainer>

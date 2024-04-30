@@ -22,7 +22,7 @@ const HomeScreen = ({navigation}) => {
       <Text style={styles.header}>Behöver du skjuts? Boka taxi nu!</Text>
       <StatusBar style='auto'/>
       <View style={styles.titleContainer}>
-      <Button tyle={styles.title}   title="Beställ" onPress={() => navigation.navigate('Boking')} s
+      <Button tyle={styles.title}   title="Beställ" onPress={() => navigation.navigate('Boking')} 
       />
       </View>
     </View>

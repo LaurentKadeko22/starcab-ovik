@@ -10,9 +10,8 @@ const Confirmation = ({navigation}) => {
     <View style={styles.content}>
       <Text style={styles.headline}></Text>
       <Image source={FrontImage2} style={styles.image} />
-      <Text style={styles.phoneNumber}>Phone Number</Text>
       <View style={styles.loginContainer}>
-        <Text style={styles.Textinfo}>Or sign Up with</Text>
+        <Text style={styles.Textinfo}>Sign up with</Text>
         <View style={styles.loginOptions}>
           <Text style={{flex: 1, textAlign: "center", top: "50%"}}>
           </Text>
@@ -25,7 +24,7 @@ const Confirmation = ({navigation}) => {
         </TouchableOpacity>
         </View>
         {/* Button to sign in */}
-        <TouchableOpacity onPress={() => Linking.openURL("#")}>
+        <TouchableOpacity onPress={() => navigation.navigate('LoginForm')} >
           <Text style={styles.loginButton}>Login</Text>
         </TouchableOpacity>
     </View>
@@ -83,7 +82,7 @@ const styles = StyleSheet.create({
     textAlign: "center"
   },
   loginButton: {
-    position: "relative",
+    position: "absolute",
     textAlign: "center",
     top:  450,
     color: "white",
