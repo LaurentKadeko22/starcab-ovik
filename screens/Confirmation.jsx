@@ -1,5 +1,6 @@
-import {Button, StyleSheet, Text, View, Image } from 'react-native'
-import React from 'react'
+import {Button, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
+import { Linking } from 'react-native';
+import { Link } from 'expo-router';
 
 const FrontImage2 = require("../assets/frontside.png");
 
@@ -13,10 +14,20 @@ const Confirmation = ({navigation}) => {
       <View style={styles.loginContainer}>
         <Text style={styles.Textinfo}>Or sign Up with</Text>
         <View style={styles.loginOptions}>
-          <Text style={{flex: 1, textAlign: "center"}}>Facebook</Text>
+          <Text style={{flex: 1, textAlign: "center", top: "50%"}}>
+          </Text>
+         </View>
+         <TouchableOpacity onPress={() => Linking.openURL("https://www.facebook.com/reg/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzE0NDk1NjI1LCJjYWxsc2l0ZV9pZCI6MzYzOTY5MDQ0ODc4OTI4fQ%3D%3D")}>        
+         <Text style={styles.facebook}>facebook</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => Linking.openURL("https://accounts.google.com/signup/v2/createaccount?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&parent_directed=true&theme=glif&ddm=0&flowName=GlifWebSignIn&flowEntry=SignUp")}>        
+         <Text style={styles.google}>google</Text>
+        </TouchableOpacity>
         </View>
-      </View>
-      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+        {/* Button to sign in */}
+        <TouchableOpacity onPress={() => Linking.openURL("#")}>
+          <Text style={styles.loginButton}>Login</Text>
+        </TouchableOpacity>
     </View>
   )
 }
@@ -58,14 +69,31 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "500"
   },
-  loginOptions: {
-    width: 80,
-    height: 80,
-    backgroundColor: "grey",
-    left: 30,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-    borderBottomRightRadius: 20,
-    borderBottomLeftRadius: 20,
+  facebook: {
+    display: "flex",
+    textAlign: "center",
+    color: "blue",
+    fontSize: 30,
+    borderRadius: 20,
   },
+
+  google: {
+    color: "blue",
+    fontSize: 30,
+    textAlign: "center"
+  },
+  loginButton: {
+    position: "relative",
+    textAlign: "center",
+    top:  450,
+    color: "white",
+    fontSize: 20,
+    textTransform: "uppercase",
+    backgroundColor: "#FFBC07",
+    width: "50%",
+    left: "25%",
+    paddingTop: 10,
+    paddingBottom: 10,
+  }
+  
 })
