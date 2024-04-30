@@ -24,7 +24,7 @@ const Confirmation = ({navigation}) => {
         </TouchableOpacity>
         </View>
         {/* Button to sign in */}
-        <TouchableOpacity onPress={() => navigation.navigate('LoginForm')} >
+        <TouchableOpacity onPress={() => navigation.navigate('LoginForm')}>
           <Text style={styles.loginButton}>Login</Text>
         </TouchableOpacity>
     </View>
